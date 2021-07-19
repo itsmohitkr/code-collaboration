@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col_3" id="left_container">
+                <div class="left_container_child" id="heading">
+                    <h2><i class="far fa-clipboard"></i> Live Editor</h2>
+
+                </div>
+
+                <div class="left_container_child" id="textarea_box">
+                    <textarea name="" id="editor_textArea" cols="65" rows="33"
+                        placeholder="start your </> ... .. .your code is visible to your's peer."></textarea>
+                </div>
+
+                <div class="left_container_child" id="user_connect" onclick="connectUser()">
+                    <i class="fas fa-user-plus fa-2x"></i>
+                </div>
+            </div>
+            <div class="col_3" id="middle_container">
+                <div class="middle_container_child" id="video-grid">
+                </div>
+                <div class="middle_container_child" id="audio_video_controller">
+                    <div class="controller_block">
+                        <div class="controller_btn main__mute_button" onclick="muteUnmute()">
+                            <i class="fas fa-microphone fa-2x"></i>
+                        </div>
+                        <div class="controller_btn main__video_button" onclick="playStop()"><i
+                                class="fas fa-camera fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col_3" id="right_container">
+                <div class="right_container_child" id="chat_heading">
+                    <h2 id="name">Mohit</h2>
+                    <h2 id="chat_logo"><i class="fas fa-comments"></i> Chats</h2>
+                </div>
+                <div class="right_container_child message_area">
+                    <!-- <div class="incoming message">
+                        <h4>Mohit</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                    </div>
+                    <div class="outgoing message">
+                        <h4>abhay</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                    </div> -->
+
+                </div>
+                <div class="right_container_child" id="send_chat_area">
+                    <textarea name="" id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
