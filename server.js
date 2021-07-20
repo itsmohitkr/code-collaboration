@@ -39,6 +39,15 @@ io.on('connection',(socket) => {
             socket.to(roomId).emit('text_data', text)
         })
 
+        // notification message
+
+        socket.emit("notification", "welcome to code-collabration");
+        socket.broadcast.emit("notification", `A new user has joined the chat. 🤩`)
+        
+        socket.on("disconnect", () => {
+            io.emit("notification", `A user has left the chat.😞`)
+        })
+
         socket.on('disconnect', () => {
             socket.to(roomId).emit('user-disconnected', userId)
         })

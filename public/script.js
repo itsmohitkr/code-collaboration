@@ -14,7 +14,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
-    port: "443"
+    port: "3030"
 });
 
 
@@ -36,13 +36,28 @@ navigator.mediaDevices.getUserMedia({ // getUserMedia return a promise
     });
     
     socket.on('user-connected', (userId) => {
-        console.log("new user connected");
+        // console.log("new user connected");
         setTimeout(connectToNewUser, 1000, userId, stream)
         
         // connectToNewUser(userId, stream);
     })
-})
 
+    socket.on("notification", notification => {
+        console.log(notification);
+
+        appendNotification(notification);
+    })
+})
+function appendNotification(Notification) {
+     let Div= document.createElement('div');
+     let className = "notification";
+     Div.classList.add(className);
+     let format = `
+        <p>${Notification}</p>
+    `
+    Div.innerHTML = format;
+    messageArea.appendChild(Div);
+}
 socket.on('user-disconnected', userId => {
     if (peer[userId]) peer[userId].close()
 })
@@ -204,6 +219,9 @@ const setPlayVideo = () => {
 //   <span>Play Video</span>
     document.querySelector('.main__video_button').innerHTML = html;
 }
+
+// end call
+
 
 // connect user
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
@@ -27,7 +28,7 @@
 
                 <div class="left_container_child" id="textarea_box">
                     <textarea name="" id="editor_textArea" cols="65" rows="33"
-                        placeholder="start your </> ... .. .your code is visible to your's peer."></textarea>
+                        placeholder="start your </> ... .. .your code is apparent to your's friend."></textarea>
                 </div>
 
                 <div class="left_container_child" id="user_connect" onclick="connectUser()">
@@ -42,15 +43,18 @@
                         <div class="controller_btn main__mute_button" onclick="muteUnmute()">
                             <i class="fas fa-microphone fa-2x"></i>
                         </div>
-                        <div class="controller_btn main__video_button" onclick="playStop()"><i
-                                class="fas fa-camera fa-2x"></i>
+                        <!-- <div class="controller_btn main__end_button">
+                            <a href="/"><i class="fas fa-phone-slash fa-2x"></i></a>
+                        </div> -->
+                        <div class="controller_btn main__video_button" onclick="playStop()">
+                            <i class="fas fa-camera fa-2x"></i>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col_3" id="right_container">
                 <div class="right_container_child" id="chat_heading">
-                    <h2 id="name">Mohit</h2>
+                    <h2 id="name"></h2>
                     <h2 id="chat_logo"><i class="fas fa-comments"></i> Chats</h2>
                 </div>
                 <div class="right_container_child message_area">
@@ -61,6 +65,10 @@
                     <div class="outgoing message">
                         <h4>abhay</h4>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                    </div> -->
+
+                    <!-- <div class="notification">
+                        <p>abhay has joined the chat</p>
                     </div> -->
 
                 </div>
