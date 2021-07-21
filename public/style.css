@@ -80,10 +80,6 @@ textarea{
     border-radius: 5px;
 }
 
-/* .middle_container_child{    
-    background-color: #2e2e2ed8;
-} */
-
 #video-grid{
     height: 625px;
     display: flex;
@@ -104,7 +100,6 @@ video{
     background-color: #3d3d3dd8;
     text-align: center;
     padding: 12px;
-    /* position: absolute; */
     bottom: 0;
     width: 100%;
     border-radius: 5px;
@@ -234,25 +229,20 @@ video{
         flex-direction: column;
     }
     .col_3{
-        /* height: 100vh; */
         flex: none;
     }
     #editor_textArea{
         width: 100%;
-        /* height: 84vh; */
     }
     #middle_container{
-        /* background-color: #3d3d3dd8; */
         margin: 5px;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* justify-content: center; */
         order: 1;
     }
     #video-grid {
-        /* height: 632px; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -269,32 +259,9 @@ video{
         background-color: #373737;
         text-align: center;
         padding: 25px;
-        /* position: absolute; */
         bottom: 0;
         width: 100%;
     }
-    /* .message_area {
-        height: 680px;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-        padding-top: 40px;
-        background-color: rgb(235, 235, 235);
-    }
-    #send_chat_area {
-        position: absolute;
-        bottom: 0;
-        width: 97%;
-    }
-    #textarea {
-        background-color: #3d3d3dd8;
-        outline: none;
-        padding: 15px;
-        font-size: 18px;
-        border: none;
-        width: 100%;
-    } */
     #left_container{
         order: 3;
         min-height: 100vh;

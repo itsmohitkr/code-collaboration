@@ -24,7 +24,6 @@ navigator.mediaDevices.getUserMedia({ // getUserMedia return a promise
     audio:true
 }).then((stream) => {
     myVideoStream = stream;
-    // console.log(typeof stream);
     addVideoStream(myVideo, stream);
     
     peer.on("call", (call) => {
@@ -180,7 +179,6 @@ const setMuteButton = () => {
     const html = `
     <i class="fas fa-microphone fa-2x"></i>
     `
-    // <span>Mute</span>
     document.querySelector('.main__mute_button').innerHTML = html;
 }
 
@@ -188,7 +186,6 @@ const setUnmuteButton = () => {
     const html = `
     <i class="unmute fas fa-microphone-slash fa-2x"></i>
     `
-    // <span>Unmute</span>
     document.querySelector('.main__mute_button').innerHTML = html;
 }
 
@@ -208,7 +205,6 @@ const setStopVideo = () => {
     const html = `
     <i class="fas fa-video fa-2x"></i>
     `
-    // <span>Stop Video</span>
     document.querySelector('.main__video_button').innerHTML = html;
 }
 
@@ -216,11 +212,9 @@ const setPlayVideo = () => {
     const html = `
   <i class="stop fas fa-video-slash fa-2x"></i>
   `
-//   <span>Play Video</span>
     document.querySelector('.main__video_button').innerHTML = html;
 }
 
-// end call
 
 
 // connect user
