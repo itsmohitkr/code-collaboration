@@ -41,7 +41,7 @@ io.on('connection',(socket) => {
 
         // notification message
 
-        socket.emit("notification", "welcome 👏 to code </> collabration 💻.");
+        socket.emit("notification", "welcome 👏 to the code </> collaboration app 💻.");
         socket.broadcast.emit("notification", `A new user has joined the chat. 🤩`)
         
         socket.on("disconnect", () => {
